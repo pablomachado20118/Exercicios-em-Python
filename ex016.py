@@ -1,0 +1,3 @@
+#Crie um programa que leia um número Real qualquer pelo teclado e mostre na tela a sua porção Inteira.
+num = float(input('Digite um numero real. '))
+print(f'A parte inteira do seu numero é {num:.0f}')

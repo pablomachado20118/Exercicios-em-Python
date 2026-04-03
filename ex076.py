@@ -1,0 +1,15 @@
+#Crie um programa que tenha uma tupla única com nomes de produtos e seus respectivos preços, na sequência. 
+# No final, mostre uma listagem de preços, organizando os dados em forma tabular.
+lista = ('lapis', 1.75 , 'Borracha', 2.00, 'Caderno', 15.90 , 'Estojo', 25.00 , 'Transferidor', 4.20 , 'Compasso', 9.99 , 'Mochila' , 120.32 , 'Canetas', 22.30, 'Livro ',34.90)
+print('_' * 30)
+print(f'{"LISTAGEM DE PRECOS":^30}')
+print('_' * 30)
+print(f'{lista[0]:.<30}R${lista[1]:>7}')
+print(f'{lista[2]:.<30}R${lista[3]:>7}')
+print(f'{lista[4]:.<30}R${lista[5]:>7}')
+print(f'{lista[6]:.<30}R${lista[7]:>7}')
+print(f'{lista[8]:.<30}R${lista[9]:>7}')
+print(f'{lista[10]:.<30}R${lista[11]:>7}')
+print(f'{lista[12]:.<30}R${lista[13]:>7}')
+print(f'{lista[14]:.<30}R${lista[15]:>7}')
+print(f'{lista[16]:.<30}R${lista[17]:>7}')
