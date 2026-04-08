@@ -1,3 +1,5 @@
-from  operator import itemgetter
-dados = {'titulo': 'Star Wars', 'ano': 1977, 'diretor': 'George Lucas'}
-print(dados.items()) 
+def dobra(lista):
+    print([x * 2 for x in lista])
+
+
+dobra([1, 2, 3, 4, 5])
