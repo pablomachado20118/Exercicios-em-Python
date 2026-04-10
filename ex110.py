@@ -2,4 +2,4 @@
 import Modulo
 
 p = float(input('Digite o valor do produtor: R$'))
-Modulo.resumo(p , 30, 40)
+Modulo.resumo(p , 20, 12)

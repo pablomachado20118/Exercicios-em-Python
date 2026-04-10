@@ -35,7 +35,7 @@ def moeda(num):
     return f'R${num:.2f}'
 
 #Resumo
-def resumo(num, aumento, reducao):
+def resumo(num, aumento=0, reducao=0):
     print('-' *30)
     print(f'{'RESUMO DO VALOR':^30}')
     print('-' *30)
@@ -49,3 +49,15 @@ def resumo(num, aumento, reducao):
     print(f'R${num * (1 + (aumento /100 )):.2f}')
     print(f'{f"{reducao}% de reducao:":<20}',end= ' ')
     print(f'R${num * (1 - (reducao /100)):.2f}')
+
+#dados monetario
+#MEU DEUS QUE ORGULHO
+def leiadinheiro(valor):
+    c = f'{valor}'.replace(',' , '.')
+    f = f'{c}'.replace('.','0')
+    if f.isnumeric() == True:
+        c = float(c)
+        return resumo(c)
+    else:
+        print(F'ERRO!!! {c} é um preco invado!!')
+        return leiadinheiro(input('Digite o preco: R$'))
