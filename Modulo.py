@@ -61,3 +61,104 @@ def leiadinheiro(valor):
     else:
         print(F'ERRO!!! {c} é um preco invado!!')
         return leiadinheiro(input('Digite o preco: R$'))
+    
+
+
+#Aula questao 113
+def leiaint113(msg):
+    entrada = str(input(msg))
+    while True:
+        try:
+            int(entrada)
+        except:
+            print('Erro!! Digite um numero inteiro valido!!')
+            entrada = str(input(msg))
+        else:
+            return entrada
+
+
+
+#Aula questao 113
+def leiafloat113(msg):
+    entrada = str(input(msg))
+    while True:
+        try:
+            float(entrada)
+        except:
+            print('Erro!! Digite um numero real valido!!')
+            entrada = str(input(msg))
+        else:
+            return entrada
+
+
+#exercicio 115
+
+def linha(num = 42):
+    return '-' * num
+
+def comeco(txt):
+    print(linha())
+    print(txt.center(42))
+    print(linha())
+
+def menu(lista):
+    comeco('Menu Principal')
+    c = 1
+    for i in lista:
+        print(f'{c} - {i}')
+        c += 1
+    print(linha())
+    opc = leiafloat113('Sua opcao: ')
+    return opc
+
+
+def arquivoexiste(nome):
+    try:
+        a = open(nome, 'rt')
+        a.close()
+    except FileNotFoundError:
+        return False
+    else:
+        return True
+    
+
+def criararquivo(nome):
+    try:
+        a = open(nome, 'wt+')
+        a.close
+    except:
+        print('Houve um erro na criacao do arquivo!!')
+    else:
+        print(f'Arquivo {nome} criado  com sucesso!!')
+
+def lerarquivo(nome):
+    try:
+        a = open(nome, 'rt')
+    except:
+        print('Erro  ao ler o arquivo')
+    else:
+        comeco('Pessoas cadastradas')
+        for l in a:
+            dado = l.split(';')
+            dado[1] = dado[1].replace('\n', '')
+            print(f'{dado[0]:<30}{dado[1]} anos ')
+    finally:
+        a.close()
+
+
+def cadastrar(arq,nome='desconhecido', idade=0):
+    try:
+        a = open(arq, 'at')
+    except:
+        print('Houve um erro na abertura do arquivo!')
+    else:
+        try:
+            a.write(f'{nome};{idade}\n')
+        except:
+            print('Houve um erro na hora de escrever os dados')
+        else:
+            print(f'Novo registro de {nome} adicionado.')
+            a.close()
+        
+
+
